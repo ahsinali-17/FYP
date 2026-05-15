@@ -8,12 +8,12 @@ const analyzeImageWithAI = async (fileBuffer, originalName) => {
   console.log("Sending image to AI Model (Python)...");
   
   const response = await axios.post(
-    "http://localhost:5000/predict",
+    "https://ahsinali-17-fyp-ai-service.hf.space/predict",
     formData,
-    { headers: { ...formData.getHeaders() } }
-    // { headers: { "Content-Type": "multipart/form-data", ...formData.getHeaders() },
-    //  timeout: 120000 //for cold starts 
-    //  }
+    //{ headers: { ...formData.getHeaders() } }
+    { headers: { "Content-Type": "multipart/form-data", ...formData.getHeaders() },
+     timeout: 120000 //for cold starts 
+     }
   );
   
   return response.data;

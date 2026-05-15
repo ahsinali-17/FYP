@@ -30,9 +30,9 @@ app.use("/api/support", ticketRoutes);
 app.use("/api/email", emailNotificationRoutes);
 
 // Start Server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Node Server running on port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Node Server running on port ${PORT}`);
+// });
 
 module.exports = app;
